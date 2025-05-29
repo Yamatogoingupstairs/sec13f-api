@@ -1,5 +1,6 @@
 from flask import Flask, request, jsonify
 import subprocess
+import os  # ← 追加
 
 app = Flask(__name__)
 
@@ -19,4 +20,5 @@ def run_script():
         return jsonify({"status": "error", "message": str(e)}), 500
 
 if __name__ == "__main__":
-    app.run(host='0.0.0.0', port=10000)
+    port = int(os.environ.get("PORT", 5000))  # ← ここ変更
+    app.run(host='0.0.0.0', port=port)
