@@ -1,5 +1,4 @@
 from flask import Flask, request, jsonify
-import process_module  # 軽量な処理関数だけ入れたモジュール
 
 app = Flask(__name__)
 
@@ -13,7 +12,6 @@ def run_script():
 
 import os
 
-import os
 
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 10000))  # デフォルト10000
