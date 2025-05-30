@@ -3,3 +3,8 @@ requests
 beautifulsoup4
 pandas
 python-magic
+flask
+requests
+beautifulsoup4
+pandas
+gunicorn
